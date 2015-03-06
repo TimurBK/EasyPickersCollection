@@ -7,7 +7,7 @@ s.license = { :type => 'MIT', :file => 'LICENSE' }
 s.author = 'Timur Kuchkarov'
 s.source = { :git => "https://github.com/TimurBK/EasyPickersCollection.git", :tag => s.version.to_s }
 s.ios.deployment_target = '7.0'
-s.source_files = 'EasyPickers'
+s.source_files = 'EasyPickers/**/*.{h,m}'
 s.requires_arc = true
 s.dependency 'ReactiveCocoa', '~> 2.4'
 end
