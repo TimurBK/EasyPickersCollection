@@ -1,6 +1,6 @@
 //
 //  BasePickerView.h
-//  SoccerPredictions
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 02.02.14.
 //  Copyright (c) 2014 Timur Kuchkarov. All rights reserved.
@@ -10,7 +10,7 @@
 
 @class RACSignal;
 
-@interface BasePickerView : UIView
+@interface i2KEPCBasePickerView : UIView
 
 /**
  *  Init picker with title.
@@ -43,13 +43,24 @@
  */
 @property (nonatomic, strong) UIImage *backgroundImage;
 
+/**
+ *  Confirm button image for Normal state.
+ */
 @property (nonatomic, strong) UIImage *confirmButtonImage;
+
+/**
+ *  Selected state image for confirm button.
+ */
 @property (nonatomic, strong) UIImage *selectedConfirmButtonImage;
+
+/**
+ *  Highlighted state image for confirm button.
+ */
 @property (nonatomic, strong) UIImage *highlightedConfirmButtonImage;
 
 @end
 
-@interface BasePickerView (Subclassing)
+@interface i2KEPCBasePickerView (Subclassing)
 
 /**
  *  This method is called when confirm button is tapped. Gets current value if available and sends it via `valueSignal`.

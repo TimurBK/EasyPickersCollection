@@ -1,14 +1,14 @@
 //
-//  LanguagePickerView.h
-//  SoccerPredictions
+//  SingleComponentPickerView.h
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 02.02.14.
 //  Copyright (c) 2014 Timur Kuchkarov. All rights reserved.
 //
 
-#import "BasePickerView.h"
+#import "i2KEPCBasePickerView.h"
 
-@interface SingleComponentPickerView : BasePickerView
+@interface i2KEPCSingleComponentPickerView : i2KEPCBasePickerView
 
 @property (nonatomic, readonly, weak) UIPickerView *valuePicker;
 

@@ -1,14 +1,14 @@
 //
 //  MultiComponentPickerView.h
-//  SoccerPredictions
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 28.02.15.
 //  Copyright (c) 2015 Timur Kuchkarov. All rights reserved.
 //
 
-#import "BasePickerView.h"
+#import "i2KEPCBasePickerView.h"
 
-@interface MultiComponentPickerView : BasePickerView
+@interface i2KEPCMultiComponentPickerView : i2KEPCBasePickerView
 
 @property (nonatomic, readonly, weak) UIPickerView *valuePicker;
 

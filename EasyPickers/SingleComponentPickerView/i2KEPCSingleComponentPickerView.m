@@ -1,22 +1,22 @@
 //
-//  LanguagePickerView.m
-//  SoccerPredictions
+//  SingleComponentPickerView.m
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 02.02.14.
 //  Copyright (c) 2014 Timur Kuchkarov. All rights reserved.
 //
 
-#import "SingleComponentPickerView.h"
+#import "i2KEPCSingleComponentPickerView.h"
 #import <ReactiveCocoa.h>
 
-@interface SingleComponentPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface i2KEPCSingleComponentPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIPickerView *valuePicker;
 @property (nonatomic, strong) NSArray *valuesArray;
 
 @end
 
-@implementation SingleComponentPickerView
+@implementation i2KEPCSingleComponentPickerView
 
 - (instancetype)initWithTitle:(NSString *)title
 				  valuesArray:(NSArray *)valuesArray

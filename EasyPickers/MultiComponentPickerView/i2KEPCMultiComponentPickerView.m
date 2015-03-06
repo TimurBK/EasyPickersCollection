@@ -1,22 +1,22 @@
 //
 //  MultiComponentPickerView.m
-//  SoccerPredictions
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 28.02.15.
 //  Copyright (c) 2015 Timur Kuchkarov. All rights reserved.
 //
 
-#import "MultiComponentPickerView.h"
+#import "i2KEPCMultiComponentPickerView.h"
 #import <ReactiveCocoa.h>
 
-@interface MultiComponentPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface i2KEPCMultiComponentPickerView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIPickerView *valuePicker;
 @property (nonatomic, strong) NSArray *valuesArray;
 
 @end
 
-@implementation MultiComponentPickerView
+@implementation i2KEPCMultiComponentPickerView
 
 - (instancetype)initWithTitle:(NSString *)title
 				  valuesArray:(NSArray *)valuesArray

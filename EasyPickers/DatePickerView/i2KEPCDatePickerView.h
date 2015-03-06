@@ -1,18 +1,18 @@
 //
 //  DatePickerView.h
-//  SoccerPredictions
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 04.02.14.
 //  Copyright (c) 2014 Timur Kuchkarov. All rights reserved.
 //
 
-#import "BasePickerView.h"
+#import "i2KEPCBasePickerView.h"
 
 /**
  *  This subclass presents date picker.
  *  Value signal in this subclass sends selected date on picker dismissal.
  */
-@interface DatePickerView : BasePickerView
+@interface i2KEPCDatePickerView : i2KEPCBasePickerView
 
 @property (nonatomic, readonly, weak) UIDatePicker *datePicker;
 

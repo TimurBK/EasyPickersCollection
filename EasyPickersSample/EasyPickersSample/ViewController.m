@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "SingleComponentPickerView.h"
-#import "MultiComponentPickerView.h"
+#import "i2KEPCSingleComponentPickerView.h"
+#import "i2KEPCMultiComponentPickerView.h"
 #import <ReactiveCocoa.h>
 
-#import "DatePickerView.h"
+#import "i2KEPCDatePickerView.h"
 
 @interface ViewController ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -21,8 +21,8 @@
 @property (nonatomic, weak) IBOutlet UIButton *multiPickerButton;
 @property (nonatomic, weak) IBOutlet UIButton *multiPickerWithDelegateButton;
 
-@property (nonatomic, weak) SingleComponentPickerView *singleComponentPicker;
-@property (nonatomic, weak) MultiComponentPickerView *multiComponentPicker;
+@property (nonatomic, weak) i2KEPCSingleComponentPickerView *singleComponentPicker;
+@property (nonatomic, weak) i2KEPCMultiComponentPickerView *multiComponentPicker;
 
 @property (nonatomic, strong) NSArray *singleComponentPickerValues;
 @property (nonatomic, strong) NSArray *multiComponentPickerValues;
@@ -57,10 +57,10 @@
 	self.datePickerButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
 		return [RACSignal createSignal:^RACDisposable * (id<RACSubscriber> subscriber) {
 			@strongify(self);
-			DatePickerView *datePicker = [[DatePickerView alloc] initWithTitle:@"Nice title"
-																   currentDate:[NSDate date]
-																	pickerMode:UIDatePickerModeDate
-																  pickerLocale:[NSLocale currentLocale]];
+			i2KEPCDatePickerView *datePicker = [[i2KEPCDatePickerView alloc] initWithTitle:@"Nice title"
+																			   currentDate:[NSDate date]
+																				pickerMode:UIDatePickerModeDate
+																			  pickerLocale:[NSLocale currentLocale]];
 
 			RAC(self, selectedDate) = [datePicker valueSignal];
 
@@ -73,7 +73,7 @@
 
 	self.singlePickerButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
 		return [RACSignal createSignal:^RACDisposable * (id<RACSubscriber> subscriber) {
-			SingleComponentPickerView *singleComponentPickerView = [[SingleComponentPickerView alloc]
+			i2KEPCSingleComponentPickerView *singleComponentPickerView = [[i2KEPCSingleComponentPickerView alloc]
 					initWithTitle:@"Values"
 					  valuesArray:@[ @"Qwerty", @"Asdf", @"Password", @"Admin", @"Test" ]
 				initialValueIndex:self.selectedIndexSingle];
@@ -94,8 +94,8 @@
 	self.singlePickerWithDelegateButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
 		return [RACSignal createSignal:^RACDisposable * (id<RACSubscriber> subscriber) {
 			@strongify(self);
-			SingleComponentPickerView *singlePickerWithDelegate =
-				[[SingleComponentPickerView alloc] initWithTitle:@"Delegated" dataSource:self delegate:self];
+			i2KEPCSingleComponentPickerView *singlePickerWithDelegate =
+				[[i2KEPCSingleComponentPickerView alloc] initWithTitle:@"Delegated" dataSource:self delegate:self];
 
 			self.singleComponentPicker = singlePickerWithDelegate;
 			[singlePickerWithDelegate showPicker];
@@ -118,7 +118,7 @@
 	self.multiPickerButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
 		return [RACSignal createSignal:^RACDisposable * (id<RACSubscriber> subscriber) {
 
-			MultiComponentPickerView *picker = [[MultiComponentPickerView alloc]
+			i2KEPCMultiComponentPickerView *picker = [[i2KEPCMultiComponentPickerView alloc]
 					  initWithTitle:@"Multi picker"
 						valuesArray:
 							@[ @[ @"Test11", @"Test12", @"Test13", @"Test14" ], @[ @"Test21", @"Test22", @"Test23" ] ]
@@ -136,29 +136,30 @@
 			return nil;
 		}];
 	}];
-	
+
 	self.multiPickerWithDelegateButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * (id input) {
 		return [RACSignal createSignal:^RACDisposable * (id<RACSubscriber> subscriber) {
 
-			MultiComponentPickerView *picker =
-				[[MultiComponentPickerView alloc] initWithTitle:@"Delegated multi" dataSource:self delegate:self];
+			i2KEPCMultiComponentPickerView *picker =
+				[[i2KEPCMultiComponentPickerView alloc] initWithTitle:@"Delegated multi" dataSource:self delegate:self];
 			self.multiComponentPicker = picker;
 			[picker showPicker];
-			
 
 			[self.selectedIndexesMultiDelegated
 				enumerateObjectsUsingBlock:^(NSNumber *obj, NSUInteger idx, BOOL *stop) {
 					[picker.valuePicker selectRow:[obj integerValue] inComponent:idx animated:NO];
 				}];
-			
+
 			[[picker valueSignal] subscribeNext:^(RACTuple *x) {
 				@strongify(self);
 				self.selectedIndexesMultiDelegated = [x.first mutableCopy];
-				
+
 				NSMutableString *string = [NSMutableString stringWithFormat:@"MD:"];
-				[self.selectedIndexesMultiDelegated enumerateObjectsUsingBlock:^(NSNumber *obj, NSUInteger idx, BOOL *stop) {
-					[string appendFormat:@"[%@, %@]%@, ", @(idx), obj, self.multiComponentPickerValues[idx][[obj integerValue]]];
-				}];
+				[self.selectedIndexesMultiDelegated
+					enumerateObjectsUsingBlock:^(NSNumber *obj, NSUInteger idx, BOOL *stop) {
+						[string appendFormat:@"[%@, %@]%@, ", @(idx), obj,
+											 self.multiComponentPickerValues[idx][[obj integerValue]]];
+					}];
 				self.delegatedMultiComponentLabel.text = string;
 			}];
 			[subscriber sendCompleted];

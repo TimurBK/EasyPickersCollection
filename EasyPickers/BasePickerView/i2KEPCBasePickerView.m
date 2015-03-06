@@ -1,16 +1,16 @@
 //
 //  BasePickerView.m
-//  SoccerPredictions
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 02.02.14.
 //  Copyright (c) 2014 Timur Kuchkarov. All rights reserved.
 //
 
-#import "BasePickerView.h"
+#import "i2KEPCBasePickerView.h"
 #import <ReactiveCocoa.h>
 #import "RACEXTScope.h"
 
-@interface BasePickerView ()
+@interface i2KEPCBasePickerView ()
 
 @property (nonatomic, weak) IBOutlet UIButton *completeButton;
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation BasePickerView
+@implementation i2KEPCBasePickerView
 
 - (instancetype)initWithTitle:(NSString *)title
 {

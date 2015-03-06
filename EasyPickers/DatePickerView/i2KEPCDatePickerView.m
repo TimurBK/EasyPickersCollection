@@ -1,20 +1,20 @@
 //
 //  DatePickerView.m
-//  SoccerPredictions
+//  EasyPickersCollection
 //
 //  Created by Timur Kuchkarov on 04.02.14.
 //  Copyright (c) 2014 Timur Kuchkarov. All rights reserved.
 //
 
-#import "DatePickerView.h"
+#import "i2KEPCDatePickerView.h"
 
-@interface DatePickerView ()
+@interface i2KEPCDatePickerView ()
 
 @property (nonatomic, weak) IBOutlet UIDatePicker *datePicker;
 
 @end
 
-@implementation DatePickerView
+@implementation i2KEPCDatePickerView
 
 - (instancetype)initWithTitle:(NSString *)title
 				  currentDate:(NSDate *)currentDate
