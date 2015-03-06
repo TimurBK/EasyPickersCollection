@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jm-f6-Yaz">
+                                <rect key="frame" x="121" y="58" width="79" height="30"/>
+                                <state key="normal" title="Date picker">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVf-iv-rPq">
+                                <rect key="frame" x="88" y="96" width="144" height="30"/>
+                                <state key="normal" title="Single column picker">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJG-bY-Doz">
+                                <rect key="frame" x="13" y="134" width="295" height="30"/>
+                                <state key="normal" title="Single column picker with custom delegate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqY-VF-bmh">
+                                <rect key="frame" x="93" y="172" width="135" height="30"/>
+                                <state key="normal" title="Multi column picker">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw1-Xv-6LA">
+                                <rect key="frame" x="17" y="210" width="286" height="30"/>
+                                <state key="normal" title="Multi column picker with custom delegate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GU-qQ-JM4">
+                                <rect key="frame" x="17" y="248" width="286" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92T-Rl-kJv">
+                                <rect key="frame" x="17" y="276.5" width="286" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6k-h5-PPa">
+                                <rect key="frame" x="17" y="334.5" width="286" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi delegated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geb-gu-go8">
+                                <rect key="frame" x="17" y="363" width="286" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single delegated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6B-bx-07k">
+                                <rect key="frame" x="17" y="305" width="286" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="SqY-VF-bmh" secondAttribute="centerX" constant="-0.5" id="1ia-47-Pr6"/>
+                            <constraint firstAttribute="centerX" secondItem="uJG-bY-Doz" secondAttribute="centerX" constant="-0.5" id="8Nr-cm-Hno"/>
+                            <constraint firstItem="vw1-Xv-6LA" firstAttribute="top" secondItem="SqY-VF-bmh" secondAttribute="bottom" constant="8" id="9Zo-y0-4H0"/>
+                            <constraint firstItem="geb-gu-go8" firstAttribute="top" secondItem="S6k-h5-PPa" secondAttribute="bottom" constant="8" id="BMc-1b-xje"/>
+                            <constraint firstItem="92T-Rl-kJv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="1" id="EmP-ew-Rli"/>
+                            <constraint firstItem="S6k-h5-PPa" firstAttribute="top" secondItem="c6B-bx-07k" secondAttribute="bottom" constant="9" id="H0x-tZ-slK"/>
+                            <constraint firstAttribute="centerX" secondItem="92T-Rl-kJv" secondAttribute="centerX" id="J3c-nl-cPJ"/>
+                            <constraint firstAttribute="centerX" secondItem="S6k-h5-PPa" secondAttribute="centerX" id="J5K-nV-uF1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6GU-qQ-JM4" secondAttribute="trailing" constant="1" id="Kb4-dJ-i2i"/>
+                            <constraint firstItem="geb-gu-go8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="1" id="Nqf-wk-M0L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S6k-h5-PPa" secondAttribute="trailing" constant="1" id="Nx8-XH-d9o"/>
+                            <constraint firstItem="S6k-h5-PPa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="1" id="P4p-Va-VYB"/>
+                            <constraint firstItem="PVf-iv-rPq" firstAttribute="top" secondItem="8Jm-f6-Yaz" secondAttribute="bottom" constant="8" id="PJc-yz-NPC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c6B-bx-07k" secondAttribute="trailing" constant="1" id="Q8l-Jv-HBD"/>
+                            <constraint firstItem="92T-Rl-kJv" firstAttribute="top" secondItem="6GU-qQ-JM4" secondAttribute="bottom" constant="8" id="RKA-Pf-4fQ"/>
+                            <constraint firstAttribute="centerX" secondItem="geb-gu-go8" secondAttribute="centerX" id="ZQ2-Mi-QL2"/>
+                            <constraint firstItem="6GU-qQ-JM4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="1" id="aTj-aw-ehZ"/>
+                            <constraint firstAttribute="centerX" secondItem="8Jm-f6-Yaz" secondAttribute="centerX" constant="-0.5" id="dmX-7d-FU6"/>
+                            <constraint firstItem="c6B-bx-07k" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="1" id="eDd-SJ-Aqa"/>
+                            <constraint firstItem="c6B-bx-07k" firstAttribute="top" secondItem="92T-Rl-kJv" secondAttribute="bottom" constant="8" id="ele-jp-Lkj"/>
+                            <constraint firstItem="8Jm-f6-Yaz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="38" id="fab-1B-o9o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="geb-gu-go8" secondAttribute="trailing" constant="1" id="k7D-8D-Ocn"/>
+                            <constraint firstItem="SqY-VF-bmh" firstAttribute="top" secondItem="uJG-bY-Doz" secondAttribute="bottom" constant="8" id="rak-3d-MAJ"/>
+                            <constraint firstItem="uJG-bY-Doz" firstAttribute="top" secondItem="PVf-iv-rPq" secondAttribute="bottom" constant="8" id="rce-8k-Z5a"/>
+                            <constraint firstAttribute="centerX" secondItem="c6B-bx-07k" secondAttribute="centerX" id="ruF-VX-RHY"/>
+                            <constraint firstItem="6GU-qQ-JM4" firstAttribute="top" secondItem="vw1-Xv-6LA" secondAttribute="bottom" constant="8" id="u2d-g8-zae"/>
+                            <constraint firstAttribute="centerX" secondItem="PVf-iv-rPq" secondAttribute="centerX" id="vic-ms-ps9"/>
+                            <constraint firstAttribute="centerX" secondItem="6GU-qQ-JM4" secondAttribute="centerX" id="vvt-z5-IfU"/>
+                            <constraint firstAttribute="centerX" secondItem="vw1-Xv-6LA" secondAttribute="centerX" id="wWd-gx-6Fq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="92T-Rl-kJv" secondAttribute="trailing" constant="1" id="xrf-HI-eSi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="6GU-qQ-JM4" id="8Or-Er-bpr"/>
+                        <outlet property="datePickerButton" destination="8Jm-f6-Yaz" id="cRz-6w-3FC"/>
+                        <outlet property="delegatedMultiComponentLabel" destination="geb-gu-go8" id="U9X-zi-n4G"/>
+                        <outlet property="delegatedSingleComponentLabel" destination="c6B-bx-07k" id="qFD-81-Oom"/>
+                        <outlet property="multiComponentLabel" destination="S6k-h5-PPa" id="U5M-lf-a7t"/>
+                        <outlet property="multiPickerButton" destination="SqY-VF-bmh" id="TqS-FQ-MX7"/>
+                        <outlet property="multiPickerWithDelegateButton" destination="vw1-Xv-6LA" id="HBt-eO-Umf"/>
+                        <outlet property="singleComponentLabel" destination="92T-Rl-kJv" id="dT8-48-PlR"/>
+                        <outlet property="singlePickerButton" destination="PVf-iv-rPq" id="bLL-Kr-TFM"/>
+                        <outlet property="singlePickerWithDelegateButton" destination="uJG-bY-Doz" id="fBQ-4J-AS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="356"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
